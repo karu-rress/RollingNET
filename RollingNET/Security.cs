@@ -16,8 +16,8 @@ public static class Encryptor
 
     public static string SHA512(string input)
     {
-        using SHA512 sha256 = ssc::SHA512.Create();
-        byte[] encryptBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
+        using SHA512 sha = ssc::SHA512.Create();
+        byte[] encryptBytes = sha.ComputeHash(Encoding.UTF8.GetBytes(input));
         return Convert.ToBase64String(encryptBytes);
     }
 }
